@@ -12,7 +12,9 @@ function App() {
         if (!response.ok) {
           throw new Error(`Response status: ${response.status}`);
         }
-        setUsers(JSON.parse(response.json()))
+        const data = await response.json()
+        console.log(data)
+        setUsers(data)
       } catch (error) {
         console.error(error.message);
       }
@@ -23,9 +25,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {users.map((user) => {
+        {users.map((user) => 
           <p>{user.name}</p>
-        })}
+        )}
       </header>
     </div>
   );
