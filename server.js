@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
 });
 
 const PORT = 4000; // Ensure this port matches the Nginx proxy_pass setting
-app.listen(4000, '0.0.0.0', () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port 4000`);
 });
