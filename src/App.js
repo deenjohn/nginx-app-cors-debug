@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   async function getData() {
-    const url = "/api";
+    const url = "/api/users";
     try {
       const response = await fetch(url);
       if (!response.ok) {
