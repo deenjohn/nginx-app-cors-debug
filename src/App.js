@@ -2,6 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  async function getData() {
+    const url = "http://127.0.0.1:4000/";
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+  getData()
   return (
     <div className="App">
       <header className="App-header">
